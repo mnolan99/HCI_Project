@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+{% extends 'ontrack_app/base.html' %}
+{% load static %}
+
+{% block title_block %}
+    {{ page.title }}
+{% endblock %}
+
+<!-- basic text for the index page and a button to show restaurants --> 
+{% block body_block %}
+<div>
+        <h1 style = "color: black; text-align: center;">Dashboard</h1>
+        <p style="color: black; text-align: center;">Here you can view your upcoming appointments, book new appointments, hold zoom sessions with your GP, track COVID-19 cases in your area, 
+            get up-to-date information about restrictions in your local area</p>
+        <a href="{% url 'appointments'%}"   class="btn btn-lg btn-secondary" align= "center">Book an appointment</a>
+        </p>
+</div>
+
+
+{% endblock %}

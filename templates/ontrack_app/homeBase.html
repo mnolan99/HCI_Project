@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            OnTrack
+        </title>
+
+
+        <!-- stylesheets for bootstrap etc --> 
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'stylesheet.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- style for media --> 
+    <style>
+        
+        
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  </head>
+      <!-- background image --> 
+    <body style="background-color: blue; width: 100%; height: 100%; min-height: 1000px;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="{% url 'index' %}">OnTrack</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <!-- drop down for users not logged in --> 
+    {% if not user.is_authenticated %}
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign In or Sign up</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+        <form class="dropdown-item" id="login_form" method="post" action="{% url 'login' %}">
+    <!-- user enters login details --> 
+    {% csrf_token %}
+        Username: <input type="text" name="username" value="" size="50" />
+        <br />
+        Password: <input type="password" name="password" value="" size="50" />
+        <br />
+        <input type="submit" value="Login" />
+        </form>
+          <a class="dropdown-item" href="{% url 'register' %}">Don't have an account? Sign Up now</a>
+       </div>
+       </li>
+       </ul>
+       <div> 
+     {% endif %}
+    
+       <!-- drop down for logged in users -->       
+     {% if user.is_authenticated %}
+         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+         <ul class="navbar-nav mr-auto">
+         <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }}</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+        </div>
+        </li>
+        </ul>
+        <div> 
+     {% endif %}
+    </div>
+     <form id="searchform" action="{% url 'search' %}" method="GET" accept-charset="utf-8">
+      <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
+            <button class="searchbutton" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+</nav>
+
+
+<main role="main" class="container">
+
+  <div class="starter-template">
+
+  </div>
+
+
+
+        <div>
+            {% block body_block %}
+
+            {% endblock %}
+        </div>
+        <div>
+            {% block sidebar_block %}
+
+            {% endblock %}
+        </div>
+</main>
+
+ 
+
+          <footer class="footer" style = "background-color: #343A40; position:fixed; bottom:0px;">
+  <div class="container">
+      <ul>
+               <a href="{% url 'FAQ' %}" style="padding-right : 250px; color:white;">FAQ</a>
+               <a href="{% url 'about' %}" style="padding-right : 250px; color:white;">About Us</a>
+               <a href="{% url 't&cs' %}" style="padding-right : 250px; color:white;">Terms and Conditions</a>
+               <a href="{% url 'contact-us' %}" style="padding-right : 250px; color:white;">Contact Us</a> 
+            </ul>
+  </div>
+</footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+          <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script>$(document).ready(function () {
+    $('div.hidden').fadeIn(1500).removeClass('hidden');
+});</script>

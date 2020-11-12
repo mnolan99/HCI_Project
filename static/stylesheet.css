@@ -1,0 +1,107 @@
+body {
+
+  height: 100%; 
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;}
+
+p {
+		background-color: transparent;
+		}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.footer {
+  bottom: 0;
+  width:100%;
+  height: 60px; /* Set the fixed height of the footer here */
+ position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+  line-height: 60px; /* Vertically center the text there */
+
+}
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#map {
+                height: 50px;
+                width: 25%;
+            }
+
+
+#map2 {
+        height: 400px;  /* The height is 400 pixels */
+        width: 25%;
+          float: right;/* The width is the width of the web page */
+       }
+
+navbar-dark .navbar-text{color:white}.navbar-dark .navbar-text a{color:#fff}.navbar-dark .navbar-text a:focus,.navbar-dark .navbar-text
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+.container3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+    text-align: center;
+}
+
+.hidden{
+  display: none;
+}
+a:hover .smallbox {background-color:blue;}
+a:visited .smallbox {background-color:green;}
+a:visited .smallbox:hover {background-color:blue;
+}
