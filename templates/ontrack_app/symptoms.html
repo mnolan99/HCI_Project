@@ -1,0 +1,46 @@
+{% extends 'ontrack_app/base.html' %}
+
+{% block body_block %}
+
+
+<h1 style="color: black; text-align: left; font-size: 50px;">COVID-19 In Your Area</h1>
+<p style="color: black; text-align: left; font-size: 20px;">Here, you can view local restrictions and recent trends in
+  cases/deaths in your local area</p>
+<div>
+  <img class="thumbnail" src="{{MEDIA_URL}}graphs1.png" alt="Picture showing Glasgow's COVID-19 statistics"
+    style="width:550px;height:400px;padding:10px;" />
+  <img class="thumbnail" src="{{MEDIA_URL}}graphs2.png" alt="Picture showing Scotlands's COVID-19 statistics"
+    style="width:550px;height:400px;padding:10px;" />
+</div>
+</div>
+</div>
+
+<h2 style="padding:10px;">Local Restrictions - You are in a level 3 area</h2>
+<ul style="border-style: dotted;">
+  <li>Hospitality
+    <ul>
+      <li>Restaurants, cafes, pubs and bars can open indoors and outdoors for the consumption of food and non alcoholic
+        drinks.</li>
+      <li>The maximum number of people you can meet indoors and outdoors in a restaurant, café, pub or bar is 6 which
+        can be from up to 2 separate households.</li>
+    </ul>
+  </li>
+  <li>Shopping
+    <ul>
+      <li>All retailers can open providing they follow and have implemented Scottish Government guidance to ensure the
+        safety of customers and staff.</li>
+      <li>The maximum number of people you can meet indoors and outdoors in a restaurant, café, pub or bar is 6 which
+        can be from up to 2 separate households.</li>
+    </ul>
+  </li>
+  <li>Socialising (Indoors)
+    <ul>
+      <li>You should not meet anyone who is not in your household indoors in your home or in their home.</li>
+      <li>You can meet another household indoors in a public place such as a café or restaurant.</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+{% endblock %}

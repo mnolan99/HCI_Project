@@ -4,14 +4,27 @@
 
 
 <div style="background-color: rgba(255,255,255,0.5);">
- <header class="entry-header">
-        <h1 class="entry-title">About Us</h1>
-    </header><!-- .entry-header -->
-    
-    
-    <!-- main content of the about us description -->
-    <div class="entry-content">
-        <p>We are a small team, dedicated to helping you book appointments with your GP, view your upcoming appointments, have a zoom session with your Doctor as well as proving up-to-date information regarding COVID-19 restrictions and statistics in your local area. 
-        </p>
-{% endblock %}
-        
+     <header class="entry-header">
+          <h1 class="entry-title">About Us</h1>
+     </header><!-- .entry-header -->
+
+
+     <!-- main content of the about us description -->
+     <div class="entry-content">
+          <p>We are a small team, dedicated to helping you book appointments with your GP, view your upcoming
+               appointments, have a zoom session with your Doctor as well as proving up-to-date information regarding
+               COVID-19 restrictions and statistics in your local area.
+          </p>
+          <div>
+               <h1 class="entry-title">Meet the Team</h1>
+               <img class="thumbnail" src="{{MEDIA_URL}}Martin.jpg" alt="Picture of Martin!"
+                    style="width:250px;height:200px;padding:10px;" />
+               <img class="thumbnail" src="{{MEDIA_URL}}Eve.jpg" alt="Picture of Eve!"
+                    style="width:250px;height:200px;padding:10px;" />
+               <img class="thumbnail" src="{{MEDIA_URL}}Jordyn.jpg" alt="Picture of Jordyn!"
+                    style="width:250px;height:200px;padding:10px;" />
+               <img class="thumbnail" src="{{MEDIA_URL}}Erin.jpg" alt="Picture of Erin!"
+                    style="width:250px;height:200px;padding:10px;" />
+          </div>
+     </div>
+     {% endblock %}

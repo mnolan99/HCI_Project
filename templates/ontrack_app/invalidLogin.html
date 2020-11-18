@@ -1,16 +1,16 @@
 {% extends 'ontrack_app/base.html' %}
 
-  {% block body_block %}
-
-    
-
-  <!-- shows user that their details are wrong --> 
-  <div>
-  <h1 class="cover-heading" style = "color: white; text-align: center;">Sorry, you have provided an invalid login.</h1>
-  <p align="center">
-       <a href="{% url 'index' %}" class="btn btn-lg btn-secondary">Return to the homepage.</a>
-  </p>
-  </div>
+{% block body_block %}
 
 
- {% endblock %}
+
+<!-- shows user that their details are wrong -->
+<div>
+     <h1 class="cover-heading" style="color: white; text-align: center;">Sorry, you have provided an invalid login.</h1>
+     <p text-align="center">
+          <a href="{% url 'index' %}" class="btn btn-lg btn-secondary">Return to the homepage.</a>
+     </p>
+</div>
+
+
+{% endblock %}

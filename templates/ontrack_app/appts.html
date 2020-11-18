@@ -1,0 +1,98 @@
+{% extends 'ontrack_app/base.html' %}
+
+{% block body_block %}
+
+
+<div style="background-color: rgba(255,255,255,0.5);">
+    <h1 style="color: black; text-align: center; font-size: 50px;">Appointments</h1>
+    <!-- .entry-header -->
+
+
+    <!-- main content of the about us description -->
+   <!-- <div class="entry-content">-->
+
+      {% if user.is_authenticated %}
+      <div>
+      <p>You are logged in! View all of your appointments here! Your next appointment is on 18th November 2020, at
+        14:30.
+      </p>
+      <div>
+
+        <div style="float: right;" class="container" ">
+        <img  style="border: 5px solid #555;" class="thumbnail" src="{{MEDIA_URL}}LoggedinBooking.png"
+          alt="Picture of Calender when user logged in!" style="width:400px;height:300px;padding:10px;">
+      </div>
+    
+      <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name">
+      
+          <label for="lname">Email Address</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your email address">
+      
+          <label for="country">Available Appointment Times</label>
+          <select id="country" name="country">
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+          </select>
+      
+          <label for="subject">Your message</label>
+          <textarea id="subject" name="subject" placeholder="What would you like to speak to the GP about? (Please include your symptoms)." style="height:100px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+    
+    {% endif %}
+
+    {% if not user.is_authenticated %}
+    <div>
+      <p>Log in to view your upcoming appointments.
+      </p>
+      <div>
+
+        <div style="float: right;" class="container" ">
+        <img  style="border: 5px solid #555;" class="thumbnail" src="{{MEDIA_URL}}LoggedinBooking.png"
+          alt="Picture of Calender when user logged in!" style="width:400px;height:300px;padding:10px;">
+      </div>
+    
+      <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name">
+      
+          <label for="lname">Email Address</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your email address">
+      
+          <label for="country">Available Appointment Times</label>
+          <select id="country" name="country">
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+          </select>
+      
+          <label for="subject">Your message</label>
+          <textarea id="subject" name="subject" placeholder="What would you like to speak to the GP about? (Please include your symptoms)." style="height:100px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+    
+    {% endif %}
+</div>
+</div>
+{% endblock %}

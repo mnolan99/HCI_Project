@@ -1,53 +1,113 @@
-
 {% extends 'ontrack_app/base.html' %}
 
-<!-- accordion style faq --> 
+<!-- accordion style faq -->
 {% block body_block %}
- <div class="container">
-        <div class="media-container-row pt-5">
-            <div class="accordion-content">
-                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
-                        Frequently Asked Questions
-                </h2>
-                
-                <div id="bootstrap-accordion_474" class="panel-group accordionStyles accordion pt-5 mt-3" role="tablist" aria-multiselectable="true">
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#bootstrap-accordion_474" data-core="" href="#collapse1_474" aria-expanded="false" aria-controls="collapse1">
-                                    <h4 class="mbr-fonts-style display-5">
-                                        <!-- question --> 
-                                        <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> What is OnTrack?
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapse1_474" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="panel-body p-4">
-                                    <!-- answer --> 
-                                    <p class="mbr-fonts-style panel-text display-7">
-                                        We are a small team, dedicated to helping you book appointments with your GP, view your upcoming appointments, have a zoom session with your Doctor as well as proving up-to-date information regarding COVID-19 restrictions and statistics in your local area.</p>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingTwo">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#bootstrap-accordion_474" data-core="" href="#collapse2_474" aria-expanded="false" aria-controls="collapse2">
-                                    <h4 class="mbr-fonts-style mbr-fonts-style display-5">
-                                    <!-- question -->     
-                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> I would like to know... (Fill in more of these)
-                                    </h4>
-                                </a>
-                                
-                            </div>
-                            <div id="collapse2_474" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body p-4">
-                                    <!-- answer --> 
-                                    <p class="mbr-fonts-style panel-text display-7">
-                                        We are a small team, dedicated to helping you book appointments with your GP, view your upcoming appointments, have a zoom session with your Doctor as well as proving up-to-date information regarding COVID-19 restrictions and statistics in your local area.</p>
-                                </div>
-                            </div>
-                        </div>
-                
+<div class="container">
+    <div class="media-container-row pt-5">
+        <div class="accordion-content">
+            <h1 style="color: black; text-align: center; font-size: 50px;">Frequently Asked Questions</h1>
 
-<section class="accordion1 cid-qv5AiTkod8" id="accordion1-5b" data-rv-view="10344">
-    {% endblock %}
+            <div id="bootstrap-accordion_474" class="panel-group accordionStyles accordion pt-5 mt-3" role="tablist"
+                aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingOne">
+                        <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                            data-parent="#bootstrap-accordion_474" data-core="" href="#collapse1_474"
+                            aria-expanded="false" aria-controls="collapse1">
+                            <h4 class="mbr-fonts-style display-5">
+                                <!-- question -->
+                                <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> What is OnTrack?
+                            </h4>
+                        </a>
+                    </div>
+                    <div id="collapse1_474" class="panel-collapse noScroll collapse" role="tabpanel"
+                        aria-labelledby="headingOne">
+                        <div class="panel-body p-4">
+                            <!-- answer -->
+                            <p class="mbr-fonts-style panel-text display-7">
+                                We are a small team, dedicated to helping you book appointments with your GP, view your
+                                upcoming appointments, have a zoom session with your Doctor as well as proving
+                                up-to-date information regarding COVID-19 restrictions and statistics in your local
+                                area.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                            data-parent="#bootstrap-accordion_474" data-core="" href="#collapse2_474"
+                            aria-expanded="false" aria-controls="collapse2">
+                            <h4 class="mbr-fonts-style mbr-fonts-style display-5">
+                                <!-- question -->
+                                <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> How can I check when my
+                                next appointment is?
+                            </h4>
+                        </a>
+
+                    </div>
+                    <div id="collapse2_474" class="panel-collapse noScroll collapse" role="tabpanel"
+                        aria-labelledby="headingTwo">
+                        <div class="panel-body p-4">
+                            <!-- answer -->
+                            <p class="mbr-fonts-style panel-text display-7">
+                                In order to view your upcoming appointments, you must sign in and click the appointments
+                                tab at the top of the page. If you don't have an account, you can register on the home
+                                page.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                            data-parent="#bootstrap-accordion_474" data-core="" href="#collapse2_474"
+                            aria-expanded="false" aria-controls="collapse2">
+                            <h4 class="mbr-fonts-style mbr-fonts-style display-5">
+                                <!-- question -->
+                                <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> How can I view local
+                                COVID-19 restrictions in my area?
+                            </h4>
+                        </a>
+
+                    </div>
+                    <div id="collapse2_474" class="panel-collapse noScroll collapse" role="tabpanel"
+                        aria-labelledby="headingTwo">
+                        <div class="panel-body p-4">
+                            <!-- answer -->
+                            <p class="mbr-fonts-style panel-text display-7">
+                                You can use our postcode search to find information about local restrictions and view
+                                graphs showing the trend of cases in your area.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <a role="button" class="collapsed panel-title text-black" data-toggle="collapse"
+                            data-parent="#bootstrap-accordion_474" data-core="" href="#collapse2_474"
+                            aria-expanded="false" aria-controls="collapse2">
+                            <h4 class="mbr-fonts-style mbr-fonts-style display-5">
+                                <!-- question -->
+                                <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> Where can I book an
+                                appointment to see my GP?
+                            </h4>
+                        </a>
+
+                    </div>
+                    <div id="collapse2_474" class="panel-collapse noScroll collapse" role="tabpanel"
+                        aria-labelledby="headingTwo">
+                        <div class="panel-body p-4">
+                            <!-- answer -->
+                            <p class="mbr-fonts-style panel-text display-7">
+                                Use our handy calander on the appointments booking page to see when the next available
+                                appointment is. If you wish to book an appointment, you must sign in or register for a
+                                free account if you don't have one.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="accordion1 cid-qv5AiTkod8" id="accordion1-5b" data-rv-view="10344">
+                    {% endblock %}
