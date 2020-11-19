@@ -3,8 +3,14 @@
 {% block body_block %}
 
 
-<h1 style="color: black; text-align: left; font-size: 50px;">COVID-19 In Your Area</h1>
-<p style="color: black; text-align: left; font-size: 20px;">Here, you can view local restrictions and recent trends in
+<div class="container">
+  <div class="media-container-row pt-5">
+      <div class="accordion-content">
+          <h1 style="color: black; text-align: center; font-size: 50px;">COVID-19 In Your Area</h1>
+          </div>
+  </div>
+</div>
+<p style="color: black; text-align: center; font-size: 20px;">Here, you can view local restrictions and recent trends in
   cases/deaths in your local area</p>
 <div>
   <img class="thumbnail" src="{{MEDIA_URL}}graphs1.png" alt="Picture showing Glasgow's COVID-19 statistics"
