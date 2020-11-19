@@ -6,13 +6,14 @@ Login
 {% endblock %}
 
 {% block body_block %}
-<h1>Login to Rango</h1>
+<h1>Login to OnTrack</h1>
 <form id="login_form" method="post" action="{% url 'login' %}">
 	{% csrf_token %}
 	Username: <input type="text" name="username" value="" size="50" />
-	<br />
+<br/>
 	Password: <input type="password" name="password" value="" size="50" />
 	<br />
-	<input type="submit" value="submit" />
+	<input style="background-color: #343a40;" type="submit" value="submit" />
 </form>
+
 {% endblock %}

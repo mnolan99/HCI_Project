@@ -19,8 +19,8 @@
   <p style="color: black; text-align: center; font-size: 20px;">Wecome back {{ user.username }}! View all of your
     appointments here.</p>
 
-  <p style="color: black; text-align: center; font-size: 20px;">Your next appointment is on 19th November 2020, at
-    14:30.</p>
+  <p style="color: black; text-align: center; font-size: 20px;"><strong>Your next appointment is on 19th November 2020, at
+    14:30pm.</strong></p>
 
   <div>
     <img style="border: 5px solid #555; float: right; width:1100px;height:500px;" class="thumbnail"
@@ -51,12 +51,20 @@
     <textarea id="subject" name="subject"
       placeholder="What would you like to speak to the GP about? (Please include your symptoms)."
       style="height:100px"></textarea>
+    <button style="background-color: #343a40; color: white;" id="start-record-btn" title="Start Recording">Start
+      Dictation</button>
+    <button style="background-color: #343a40; color: white;" id="pause-record-btn" title="Pause Recording">Pause
+      Dictation</button>
+    <p>Press the <strong>Start Dictation</strong> button and allow access and use our speech-to-text feature.</p>
 
-    <input type="submit" value="Submit" onClick="alert('Thank you for booking with us. If there are any issues we will contact you on the number provided.');">
+    <input style="background-color: #343a40;" type="submit" value="Submit"
+      onClick="alert('Thank you for booking with us. If there are any issues we will contact you on the number provided.');">
+
     </div>
   </form>
   </div>
   </div>
+
 
   {% endif %}
 
@@ -66,45 +74,52 @@
     </p>
 
   </div>
-      <div>
-        <img style="border: 5px solid #555; float: right; width:1100px;height:500px;" class="thumbnail"
-          src="{{MEDIA_URL}}LoggedoutBooking.png" alt="Picture of Calender when user logged in!">
-      </div>
-    
-    
-    
-      <form action="#">
-        <label style="padding-top: 20px;" for="fname">Full Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name">
-    
-        <label for="lname">Telephone Number</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your mobile or landline number">
-    
-        <label for="country">Available Appointment Times</label>
-        <select id="country" name="country">
-          <option value="09:00">09:00</option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="13:00">13:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-        </select>
-    
-        <label for="subject">Your message</label>
-        <textarea id="subject" name="subject"
-          placeholder="What would you like to speak to the GP about? (Please include your symptoms)."
-          style="height:100px"></textarea>
-    
-          <input type="submit" value="Submit" onClick="alert('Thank you for booking with us. If there are any issues we will contact you on the number provided.');">
-        </div>
-      </form>
-      </div>
-      </div>
-    
-      {% endif %}
+  <div>
+    <img style="border: 5px solid #555; float: right; width:1100px;height:500px;" class="thumbnail"
+      src="{{MEDIA_URL}}LoggedoutBooking.png" alt="Picture of Calender when user logged in!">
+  </div>
+
+
+
+  <form action="#">
+    <label style="padding-top: 20px;" for="fname">Full Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name">
+
+    <label for="lname">Telephone Number</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your mobile or landline number">
+
+    <label for="country">Available Appointment Times</label>
+    <select id="country" name="country">
+      <option value="09:00">09:00</option>
+      <option value="10:00">10:00</option>
+      <option value="11:00">11:00</option>
+      <option value="12:00">12:00</option>
+      <option value="13:00">13:00</option>
+      <option value="14:00">14:00</option>
+      <option value="15:00">15:00</option>
+    </select>
+
+    <label for="subject">Your message</label>
+    <textarea id="subject" name="subject"
+      placeholder="What would you like to speak to the GP about? (Please include your symptoms)."
+      style="height:100px"></textarea>
+    <button style="background-color: #343a40; color: white;" id="start-record-btn" title="Start Recording">Start
+      Dictation</button>
+    <button style="background-color: #343a40; color: white;" id="pause-record-btn" title="Pause Recording">Pause
+      Dictation</button>
+    <p>Press the <strong>Start Dictation</strong> button and allow access and use our speech-to-text feature.</p>
+
+    <input style="background-color: #343a40;" type="submit" value="Submit"
+      onClick="alert('Thank you for booking with us. If there are any issues we will contact you on the number provided.');">
 
     </div>
+  </form>
+  </div>
+  </div>
+
+  {% endif %}
+
+  </div>
   </div>
   </div>
 </body>
