@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    OnTrack
+  </title>
+
+
+  <!-- links to the bootstrap stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'stylesheet.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- sets style for media -->
+  <style>
+    .form-control-borderless {
+      border: none;
+    }
+
+    .form-control-borderless:hover,
+    .form-control-borderless:active,
+    .form-control-borderless:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .input-group.md-form.form-sm.form-1 input {
+      border: 1px solid #bdbdbd;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+
+    .input-group.md-form.form-sm.form-2 input {
+      border: 1px solid #bdbdbd;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    .input-group.md-form.form-sm.form-2 input.red-border {
+      border: 1px solid #ef9a9a;
+    }
+
+    .input-group.md-form.form-sm.form-2 input.lime-border {
+      border: 1px solid #cddc39;
+    }
+
+    .input-group.md-form.form-sm.form-2 input.amber-border {
+      border: 1px solid #ffca28;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+</head>
+<!-- body style -->
+
+<body style="background-color: #e0e0eb; width: 100%; min-height: 1500px">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="{% url 'index' %}">OnTrack</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    {% if user.is_authenticated %}
+    <div class="entry-content">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index'%}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'appts'%}">Appointments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'updates'%}">COVID-19</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout'%}">Logout</a>
+          </li>
+          <li class="nav-item">
+            <p class="nav-link" style="color: white;"> Welcome {{ user.username }}</p>
+          </li>
+        </ul>
+        {% endif %}
+
+        {% if not user.is_authenticated %}
+        <div class="entry-content">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index'%}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'appts'%}">Appointments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'updates'%}">COVID-19</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'register'%}">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login'%}">Log in</a>
+              </li>
+            </ul>
+              {% endif %}
+  </nav>
+
+
+
+  <main role="main" class="container">
+
+    <div class="starter-template">
+
+    </div>
+
+
+
+    <div>
+      {% block body_block %}
+
+      {% endblock %}
+    </div>
+    <div>
+      {% block sidebar_block %}
+
+      {% endblock %}
+    </div>
+  </main>
+
+
+  <!-- interactive footer linking to about, tcs, contact and terms -->
+  <footer class="footer" style="background-color: #343a40; position:fixed; bottom:0px;">
+    <div class="container">
+      <ul>
+        <a href="{% url 'FAQ' %}" style="padding-right : 300px; color:white;">FAQ</a>
+        <a href="{% url 'about' %}" style="padding-right : 300px; color:white;">About Us</a>
+        <a href="{% url 't&cs' %}" style="padding-right : 300px; color:white;">T&Cs</a>
+    </div>
+  </footer>
+
+  <!-- links to bootstrap etc -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
