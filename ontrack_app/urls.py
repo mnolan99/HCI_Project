@@ -14,6 +14,7 @@ urlpatterns = [
     #url(r'^invalidLogin/$', views.invalidLogin, name='invalidLogin'),
     url(r'^updates/$', views.updates, name='updates'),
     url(r'^appts/$', views.appts, name='appts'),
-     url(r'^symptoms/$', views.symptoms, name='symptoms')
+     url(r'^symptoms/$', views.symptoms, name='symptoms'),
+     url(r'^apptsInfo/$', views.apptsInfo, name='apptsInfo')
 ]
 
