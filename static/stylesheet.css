@@ -1,7 +1,11 @@
 body {
-  height: 100%;
+  background-image: url("try24.jpg"); 
+  background-position: cover; 
 
-  background-position: center;
+
+  height: 100%;
+  width: 100%
+
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin: 0;
@@ -59,6 +63,7 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
+  text-align: center;
   line-height: 60px; /* Vertically center the text there */
 }
 
@@ -104,10 +109,12 @@ p {
 }
 
 navbar-dark .navbar-text {
-  color: white;
+  background-color:#022B4C
+  color: #022B4C;
 }
 .navbar-dark .navbar-text a {
-  color: #fff;
+  background-color:#022B4C
+  color: #022B4C;
 }
 .navbar-dark .navbar-text a:focus,.navbar-dark .navbar-text
 
