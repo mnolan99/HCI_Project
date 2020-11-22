@@ -9,6 +9,7 @@ from django.contrib.auth import logout
 from datetime import datetime
 from django.core.mail import send_mail, BadHeaderError
 
+
 #collects cookie and returns response
 def index(request):
     request.session.set_test_cookie()
@@ -64,7 +65,7 @@ def register(request):
 	else:
 		user_form = UserForm()
 		profile_form = UserProfileForm()
-	return render(request, 'ontrack_app/register.html', {'user_form': user_form, 
+	return render(request,'ontrack_app/register.html', {'user_form': user_form, 
 	'profile_form': profile_form, 'registered': registered})
 
 def user_login(request):
