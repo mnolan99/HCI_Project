@@ -9,12 +9,12 @@ Register
 <div class="container">
 	<div class="media-container-row pt-5">
 	  <div class="accordion-content">
-<h1 style="color: black; text-align: center; font-size: 50px;">Register with OnTrack</h1>
+<h1 style="color: black; text-align: left; font-size: 50px;">Register with OnTrack</h1>
 {% if registered %}
 OnTrack says: <strong>Thank you for registering!</strong>
 <a href="{% url 'login'%}">Login.</a><br />
 {% else %}
-<form id="user_form" method="post" action="{% url 'register'%}" enctype="multipart/form-data">
+<form  input style = "width: 200px;" id="user_form" method="post" action="{% url 'register'%}" enctype="multipart/form-data">
 	{% csrf_token %}
 	<!-- Display each form. The as_p method wraps each element in a paragraph
 (<p>) element. This ensures each element appears on a new line,
@@ -22,7 +22,7 @@ making everything look neater. -->
 	{{ user_form.as_p }}
 	{{ profile_form.as_p }}
 	<!-- Provide a button to click to submit the form. -->
-	<input style="background-color: #343a40;" type="submit" name="submit" value="Register" />
+	<input input class="btn btn-lg btn-secondary" style="background-color: #343a40;" type="submit" name="submit" value="Register" />
 </form>
 </div>
 </div>
