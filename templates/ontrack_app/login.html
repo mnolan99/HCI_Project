@@ -6,14 +6,21 @@ Login
 {% endblock %}
 
 {% block body_block %}
-<h1>Login to OnTrack</h1>
-<form id="login_form" method="post" action="{% url 'login' %}">
+
+<div class="container">
+	<div class="media-container-row pt-5">
+	  <div class="accordion-content">
+<h1 style="color: black; text-align: center; font-size: 50px;">Login to OnTrack</h1>
+<form id="user_form" method="post" action="{% url 'login' %}">
 	{% csrf_token %}
-	Username: <input type="text" name="username" value="" size="50" />
-<br/>
-	Password: <input type="password" name="password" value="" size="50" />
-	<br />
-	<input style="background-color: #343a40;" type="submit" value="submit" />
+	Username: <input style = "padding: 10px;" type="text" name="username" value="" size="25" />
+	Password: <input style = "padding: 10px;" type="password" name="password" value="" size="25" />
+	<div style = "padding: 10px";>
+	<input style="background-color: #343a40; padding: 20px;" type="submit" value="submit" />
 </form>
+
+</div>
+</div>
+</div>
 
 {% endblock %}

@@ -6,10 +6,13 @@ Register
 {% endblock %}
 
 {% block body_block %}
-<h1>Register with OnTrack</h1>
+<div class="container">
+	<div class="media-container-row pt-5">
+	  <div class="accordion-content">
+<h1 style="color: black; text-align: center; font-size: 50px;">Register with OnTrack</h1>
 {% if registered %}
 OnTrack says: <strong>Thank you for registering!</strong>
-<a href="{% url 'index'%}">Return to the homepage.</a><br />
+<a href="{% url 'login'%}">Login.</a><br />
 {% else %}
 <form id="user_form" method="post" action="{% url 'register'%}" enctype="multipart/form-data">
 	{% csrf_token %}
@@ -21,5 +24,8 @@ making everything look neater. -->
 	<!-- Provide a button to click to submit the form. -->
 	<input style="background-color: #343a40;" type="submit" name="submit" value="Register" />
 </form>
+</div>
+</div>
+</div>
 {% endif %}
 {% endblock %}
