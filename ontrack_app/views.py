@@ -40,6 +40,9 @@ def updates(request):
 def symptoms(request):
     return render(request, 'ontrack_app/symptoms.html')
 
+def apptsInfo(request):
+    return render(request, 'ontrack_app/apptsInfo.html')
+
 
 def register(request):
 	registered = False
