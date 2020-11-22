@@ -10,7 +10,8 @@ Login
 <div class="container">
 	<div class="media-container-row pt-5">
 	  <div class="accordion-content">
-<h1 style="color: black; text-align: left; font-size: 50px;">Login to OnTrack</h1>
+<h1 style="color: #022B4C; text-align: left; font-size: 50px;">Login to OnTrack</h1>
+<p>
 <form id="user_form" method="post" action="{% url 'login' %}">
 	{% csrf_token %}
 	Username: <input style = "padding: 10px; width: 250px;" type="text" name="username" value="" size="25" />
@@ -19,6 +20,7 @@ Login
 	<input class="btn btn-lg btn-secondary" style="background-color: #343a40; padding: 20px;" type="submit" value="submit" />
 </div>
 </form>
+</p>
 
 </div>
 </div>
