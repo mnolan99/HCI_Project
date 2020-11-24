@@ -5,7 +5,7 @@ Instructions to run:
 1. Clone git file (All other repos deleted)
 * git clone https://github.com/mnolan99/HCI_Project.git
 
-2. open terminal, cd into folder and enter all commands:
+2. Open terminal, cd into folder and enter all commands:
 * pip install bcrypt
 * pip install certifi
 * pip install cffi
